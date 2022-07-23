@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Attendance {
+    let ID: UUID
+    var mailAddress: String
+    var dateTimeIn: Date
+    var dateTimeOut: Date
+    var workAt: String
+}

@@ -9,8 +9,26 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AttendanceViewModel
+    var body : some View {
+        VStack {
+            Text("Attendance")
+            List(viewModel.dataSorce,id: \.ID){ data in
+                Text(data.mailAddress)
+            }
+            Button {
+                let attendance = Attendance(ID: UUID(), mailAddress: "example1@example.com", dateTimeIn: Date(), dateTimeOut: Date(), workAt: "自宅")
+                viewModel.add(attendance: attendance)
+            } label: {
+                Text("Add")
+            }
+            .buttonStyle(.borderedProminent)
+            Spacer()
+        }
+    }
+    
+    /*
     @Environment(\.managedObjectContext) private var viewContext
-
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
@@ -40,9 +58,11 @@ struct ContentView: View {
             }
             Text("Select an item")
         }
+        */
     }
 
     private func addItem() {
+        /*
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
@@ -56,9 +76,11 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+         */
     }
 
     private func deleteItems(offsets: IndexSet) {
+         /*
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
 
@@ -71,18 +93,24 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    
     }
+          */
 }
 
+/*
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.timeStyle = .medium
     return formatter
 }()
+ */
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        //ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+            .environmentObject(AttendanceViewModel())
     }
 }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class AttendanceService {
+    internal func add() {
+    }
+}

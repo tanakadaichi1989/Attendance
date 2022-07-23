@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct AttendanceApp: App {
-    let persistenceController = PersistenceController.shared
+    //let persistenceController = PersistenceController.shared
+    @StateObject var attendance = AttendanceViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(attendance)
+                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

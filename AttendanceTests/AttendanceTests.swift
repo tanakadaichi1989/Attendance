@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Attendance
 
 class AttendanceTests: XCTestCase {
 
@@ -17,12 +18,13 @@ class AttendanceTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testAttendanceAdd() throws {
+        let viewModel = AttendanceViewModel()
+        let attendance1 = Attendance(ID: UUID(), mailAddress: "example1@example.com", dateTimeIn: Date(), dateTimeOut: Date(), workAt: "自宅")
+        viewModel.add(attendance: attendance1)
+        XCTAssertEqual(viewModel.dataSorce.count, 1)
+        XCTAssertEqual(viewModel.dataSorce.last?.mailAddress, "example1@example.com")
+        XCTAssertEqual(viewModel.dataSorce.last?.workAt, "自宅")
     }
 
     func testPerformanceExample() throws {
