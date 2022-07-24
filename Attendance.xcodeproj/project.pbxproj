@@ -17,6 +17,7 @@
 		A1B0093F288C53BD006FD7A6 /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0093E288C53BD006FD7A6 /* AttendanceViewModel.swift */; };
 		A1B00941288C5485006FD7A6 /* AttendanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B00940288C5485006FD7A6 /* AttendanceService.swift */; };
 		A1B0094C288C5589006FD7A6 /* AttendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0094B288C5589006FD7A6 /* AttendanceTests.swift */; };
+		A1B00953288C6161006FD7A6 /* WorkAtButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B00952288C6161006FD7A6 /* WorkAtButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A1B00940288C5485006FD7A6 /* AttendanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceService.swift; sourceTree = "<group>"; };
 		A1B00949288C5589006FD7A6 /* AttendanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B0094B288C5589006FD7A6 /* AttendanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTests.swift; sourceTree = "<group>"; };
+		A1B00952288C6161006FD7A6 /* WorkAtButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAtButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				A1B00929288C516B006FD7A6 /* AttendanceApp.swift */,
 				A1B0092B288C516B006FD7A6 /* ContentView.swift */,
+				A1B00952288C6161006FD7A6 /* WorkAtButtonView.swift */,
 				A1B0093C288C5322006FD7A6 /* Attendance.swift */,
 				A1B0093E288C53BD006FD7A6 /* AttendanceViewModel.swift */,
 				A1B00940288C5485006FD7A6 /* AttendanceService.swift */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B00953288C6161006FD7A6 /* WorkAtButtonView.swift in Sources */,
 				A1B00933288C516C006FD7A6 /* Persistence.swift in Sources */,
 				A1B0093F288C53BD006FD7A6 /* AttendanceViewModel.swift in Sources */,
 				A1B0092C288C516B006FD7A6 /* ContentView.swift in Sources */,

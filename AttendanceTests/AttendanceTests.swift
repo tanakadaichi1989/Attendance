@@ -20,7 +20,7 @@ class AttendanceTests: XCTestCase {
 
     func testAttendanceAdd() throws {
         let viewModel = AttendanceViewModel()
-        let attendance1 = Attendance(ID: UUID(), mailAddress: "example1@example.com", dateTimeIn: Date(), dateTimeOut: Date(), workAt: "自宅")
+        let attendance1 = Attendance(ID: UUID(), mailAddress: "example1@example.com", dateTimeIn: Date(), dateTimeOut: nil, workAt: "自宅")
         viewModel.add(attendance: attendance1)
         XCTAssertEqual(viewModel.dataSorce.count, 1)
         XCTAssertEqual(viewModel.dataSorce.last?.mailAddress, "example1@example.com")
